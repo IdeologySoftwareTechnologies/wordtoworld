@@ -19,6 +19,7 @@ gem 'spring',        group: :development
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
+  gem 'pry-rails'
   gem 'debugger'
 end
 group :test do
