@@ -1,5 +1,5 @@
 class AlbumsController < ApplicationController
-  before_action :authenticate_admin!
+  before_action :authenticate_admin!, only: [:new,:edit, :update, :destroy]
 
   before_action :set_album, only: [:show, :edit, :update, :destroy]
 
