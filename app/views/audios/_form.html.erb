@@ -1,0 +1,21 @@
+<div class="row-fluid">
+<%= simple_form_for([@album, @album.audio.build]) do |f| %>
+    <%= f.error_notification %>
+
+	<div class="span3"> <%= f.input :title %></div>
+	<div class="span4"><%= f.input :audio_file %> </div>
+	<div class="span4">
+		  <%= f.hidden_field :admin_id, value: current_admin.id %>
+		  <br/>
+		  <%= f.button :submit %>
+	</div>
+<% end %>
+</div>
+
+    <div class="form-inputs">
+             
+              
+           
+            
+    </div>
+

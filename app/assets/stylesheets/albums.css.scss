@@ -1,0 +1,12 @@
+// Place all the styles related to the Albums controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+ul.albums li {
+    width: 200px;
+    display: inline-block;
+     vertical-align: top;
+     *display: inline;
+    *zoom: 1;
+}

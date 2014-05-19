@@ -1,0 +1,13 @@
+<%= simple_form_for(@album) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :title %>
+    <%= f.input :album_cover %>
+    <%#= f.input :album_type %>
+    <%#= f.input :status %>
+    <%= f.hidden_field :admin_id, value: current_admin.id %>
+    <br/>
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,26 @@
+<div class="row-fluid">
+  <div class="span2">
+    <%=image_tag @album.album_cover_url(:thumb).to_s,:class=>"img-responsive img-rounded" %>
+  </div>
+  <div class="span6">
+      <strong>
+        <%= @album.title %>
+      </strong>  
+    
+  </div>
+  <div class="span4 ">
+      <p class="pull-right">
+      <%= link_to 'Edit', edit_album_path(@album) %> |
+      <%= link_to 'Back', albums_path %>
+      </p>
+  </div>
+</div>
+    <h2>Songs List</h2>
+          <%= render @album.audio %>
+  <hr/>
+ <h2>Add a Song:</h2>
+           <%= render "audios/form" %>
+
+
+
+

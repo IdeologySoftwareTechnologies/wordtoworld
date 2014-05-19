@@ -3,4 +3,7 @@ class Admin < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,:confirmable, :lockable, :timeoutable
+
+  has_many :albums
+  has_many :audios
 end

@@ -21,6 +21,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'pry-rails'
   gem 'debugger'
+  gem "bullet"
 end
 group :test do
   gem 'selenium-webdriver'
@@ -39,9 +40,10 @@ gem 'less-rails'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'simple_form'
 #gem 'mail_form'
-#gem 'simple_form'
 #gem 'country_select'
 gem 'carrierwave'
 gem 'carrierwave-video'
+#gem "mini_magick"
+gem "rmagick"  
 gem 'devise'
 gem 'quiet_assets'
