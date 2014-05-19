@@ -35,8 +35,9 @@ group :doc do
 end
 
 gem 'therubyracer', platforms: :ruby
-#gem 'less-rails'
-#gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'less-rails'
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'simple_form'
 #gem 'mail_form'
 #gem 'simple_form'
 #gem 'country_select'
