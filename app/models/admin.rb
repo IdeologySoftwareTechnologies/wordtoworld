@@ -6,4 +6,5 @@ class Admin < ActiveRecord::Base
 
   has_many :albums
   has_many :audios
+  has_many :videos
 end
