@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
 
 
+  resources :chapters
+
   root 'welcome#index'
   devise_for :admins
   resources :albums do

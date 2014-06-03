@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140519192934) do
+ActiveRecord::Schema.define(version: 20140603040902) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -63,6 +63,15 @@ ActiveRecord::Schema.define(version: 20140519192934) do
 
   add_index "audios", ["admin_id"], name: "index_audios_on_admin_id"
   add_index "audios", ["album_id"], name: "index_audios_on_album_id"
+
+  create_table "chapters", force: true do |t|
+    t.string   "title"
+    t.integer  "admin_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "chapters", ["admin_id"], name: "index_chapters_on_admin_id"
 
   create_table "videos", force: true do |t|
     t.string   "title"

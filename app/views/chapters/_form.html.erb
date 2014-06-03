@@ -1,0 +1,10 @@
+<%= simple_form_for(@chapter) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :title %>
+     <%= f.hidden_field :admin_id, value: current_admin.id %>
+ <br/>
+    <%= f.button :submit %>
+  </div>
+<% end %>

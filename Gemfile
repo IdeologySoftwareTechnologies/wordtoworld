@@ -18,10 +18,29 @@ gem 'spring',        group: :development
 
 group :development, :test do
   gem 'sqlite3'
-  gem 'rspec-rails'
-  gem 'pry-rails'
+  gem 'rspec-rails' 
+  gem "better_errors"
+  gem "binding_of_caller"
+  gem 'annotate'
+  gem 'bullet'
   gem 'debugger'
-  gem "bullet"
+  gem 'flay'
+  gem 'hirb'
+  gem 'ngrok'
+  gem 'lol_dba'
+  gem 'mailcatcher'
+  gem 'meta_request'
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'pry-doc'
+  gem 'quiet_assets'
+  gem 'rack-mini-profiler'
+  gem 'railroady'
+  gem 'rails-footnotes'
+  gem 'rails_best_practices'
+  gem 'reek'
+  gem 'request-log-analyzer'
+  gem 'smusher'
 end
 group :test do
   gem 'selenium-webdriver'
@@ -46,4 +65,7 @@ gem 'carrierwave-video'
 #gem "mini_magick"
 gem "rmagick"  
 gem 'devise'
-gem 'quiet_assets'
+
+#---development utiles--
+
+
