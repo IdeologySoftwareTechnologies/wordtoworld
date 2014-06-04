@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140603040902) do
+ActiveRecord::Schema.define(version: 20140603171624) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -72,6 +72,18 @@ ActiveRecord::Schema.define(version: 20140603040902) do
   end
 
   add_index "chapters", ["admin_id"], name: "index_chapters_on_admin_id"
+
+  create_table "pages", force: true do |t|
+    t.string   "page_text"
+    t.string   "page_audio"
+    t.integer  "chapter_id"
+    t.integer  "admin_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "pages", ["admin_id"], name: "index_pages_on_admin_id"
+  add_index "pages", ["chapter_id"], name: "index_pages_on_chapter_id"
 
   create_table "videos", force: true do |t|
     t.string   "title"

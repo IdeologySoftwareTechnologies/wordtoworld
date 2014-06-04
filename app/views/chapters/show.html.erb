@@ -4,8 +4,10 @@
   <strong>Title:</strong>
   <%= @chapter.title %>
 </p>
+<h2>Pages</h2>
+<%= render @chapter.pages %>
 
-
-
+<h2>Add a page:</h2>
+<%= render "pages/form" %>
 <%= link_to 'Edit', edit_chapter_path(@chapter) %> |
 <%= link_to 'Back', chapters_path %>

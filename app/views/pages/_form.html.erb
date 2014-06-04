@@ -1,0 +1,14 @@
+
+
+<%= simple_form_for([@chapter, @chapter.pages.build]) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :page_audio %>
+     <%= f.input :page_text %>
+    <%= f.hidden_field :chapter_id, value: @chapter.id%>
+    <%= f.hidden_field :admin_id, value: current_admin.id %>
+ <br/>
+    <%= f.button :submit %>
+  </div>
+<% end %>

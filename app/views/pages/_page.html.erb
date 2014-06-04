@@ -1,0 +1,14 @@
+<p>
+  <strong>Page Audio:</strong>
+  <%= page.page_audio %>
+</p>
+<p>
+  <strong>Page Text:</strong>
+  <%= page.page_text %>
+</p>
+ 
+<p>
+	<%= link_to 'Destroy Page', [page.chapter, page],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>
