@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
 
-ruby '2.1.1'
-gem 'rails', '4.1.0'
+ruby '2.1.2'
+gem 'rails', '4.1.1'
 
 
 
@@ -23,7 +23,7 @@ group :development, :test do
   gem "binding_of_caller"
   gem 'annotate'
   gem 'bullet'
-  gem 'debugger'
+  #gem 'debugger'
   gem 'flay'
   gem 'hirb'
   gem 'ngrok'
@@ -59,7 +59,7 @@ gem 'less-rails'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'simple_form'
 #gem 'mail_form'
-#gem 'country_select'
+gem 'country_select'
 gem 'carrierwave'
 gem 'carrierwave-video'
 #gem "mini_magick"

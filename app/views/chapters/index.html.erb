@@ -12,16 +12,18 @@
   <tbody>
     <% @chapters.each do |chapter| %>
       <tr>
-        <td><%= chapter.title %></td>
+        <td><%=  %></td>
         
-        <td><%= link_to 'Show', chapter %></td>
+        <td><%= link_to chapter.title, chapter %></td>
+         <%if admin_signed_in? %>
         <td><%= link_to 'Edit', edit_chapter_path(chapter) %></td>
         <td><%= link_to 'Destroy', chapter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%end%>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Chapter', new_chapter_path %>
+ 
+<%= link_to 'New Chapter', new_chapter_path if admin_signed_in? %>

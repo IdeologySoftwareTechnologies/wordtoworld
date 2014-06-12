@@ -1,0 +1,24 @@
+
+<div class="container-content ">
+  	<div class="container-fluid container-modified topbot">
+  	<%if params[:type].to_i == 1%>
+	  	<% provide(:title, 'Prayer Request') %>
+	  	<h1>Prayer Request</h1>
+	<%elsif params[:type].to_i == 2%>
+		<% provide(:title, 'Testimonails') %>
+		<h1>Testimonails</h1>
+	<%elsif params[:type].to_i == 3%>
+		<% provide(:title, 'Feedback') %>
+		<h1>Feedback</h1>
+	<%elsif params[:type].to_i == 4%>
+		<% provide(:title, 'Dediacte A Song') %>
+		<h1>Dediacte A Song</h1>
+	<%else%>
+		<% provide(:title, 'Contact Us') %>
+		<h1>Contact Us</h1>
+	<%end%>
+   		
+   		<%=image_tag("contact.jpg",:class=>"img-responsive img-rounded") %>  
+		<%= render 'form'%>
+	</div>
+</div>

@@ -1,13 +1,12 @@
 Rails.application.routes.draw do
   
-
-  
-
-
-
-  
-
   root 'welcome#index'
+  get '/about-us' => 'welcome#about', as: :about 
+  get '/Contact-Us',     to: 'contacts#new',as: :contact
+  get '/Dedicate-A-Song',     to: 'contacts#new', as: :dedicate
+  get '/Feedback',     to: 'contacts#new', as: :feedback
+  get '/Prayer-Request',     to: 'contacts#new', as: :request
+  get '/Testimonials',     to: 'contacts#new', as: :testimonial
   devise_for :admins
   resources :albums do
     resources :audios
@@ -16,6 +15,7 @@ Rails.application.routes.draw do
   resources :chapters do
     resources :pages
   end
+  resources "contacts", only: [:new, :create]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

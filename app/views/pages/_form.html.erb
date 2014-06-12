@@ -7,7 +7,7 @@
     <%= f.input :page_audio %>
      <%= f.input :page_text %>
     <%= f.hidden_field :chapter_id, value: @chapter.id%>
-    <%= f.hidden_field :admin_id, value: current_admin.id %>
+    <%= f.hidden_field :admin_id, value: @chapter.admin_id %>
  <br/>
     <%= f.button :submit %>
   </div>

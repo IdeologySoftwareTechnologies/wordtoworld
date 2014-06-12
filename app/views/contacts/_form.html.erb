@@ -1,0 +1,14 @@
+<%= simple_form_for(@contact) do |f| %>
+		  <%= f.error_notification %>
+	<div class="span6 topbot">
+		<div class="form-inputs">
+		    <%= f.input :name %>
+		    <%= f.input :email %>
+		    <%= f.input :city %>
+		    <%= f.input :country %>
+		    <%= f.input :message %>
+		  	<%= f.hidden_field :category, :value=> "#{params[:type] }"%>
+		    <%= f.button :submit, :class=> "btn btn-primary" %>
+		  </div>
+		<% end %>
+	</div>
